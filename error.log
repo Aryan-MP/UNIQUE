@@ -1,0 +1,16 @@
+2024-06-07T11:10:01.641Z [ERROR] provider.terraform-provider-aws_v5.47.0_x5: Response contains error diagnostic:
+  diagnostic_summary=
+  | creating Security Group (ec2-security-group): InvalidGroup.Duplicate: The security group 'ec2-security-group' already exists for VPC 'vpc-09763e27085307634'
+  | \tstatus code: 400, request id: ce3a45e0-7bbe-4249-ba43-0f019310f7fa
+   tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ApplyResourceChange @caller=github.com/hashicorp/terraform-plugin-go@v0.22.2/tfprotov5/internal/diag/diagnostics.go:58 @module=sdk.proto diagnostic_severity=ERROR tf_proto_version=5.4 tf_req_id=a9b5df4f-b986-e0c7-7579-3b70b859a0e1 tf_resource_type=aws_security_group diagnostic_detail="" timestamp=2024-06-07T11:10:01.641Z
+2024-06-07T11:10:01.652Z [ERROR] vertex "aws_security_group.ec2_security_group" error: creating Security Group (ec2-security-group): InvalidGroup.Duplicate: The security group 'ec2-security-group' already exists for VPC 'vpc-09763e27085307634'
+	status code: 400, request id: ce3a45e0-7bbe-4249-ba43-0f019310f7fa
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mcreating Security Group (ec2-security-group): InvalidGroup.Duplicate: The security group 'ec2-security-group' already exists for VPC 'vpc-09763e27085307634'
+[31m│[0m [0m	status code: 400, request id: ce3a45e0-7bbe-4249-ba43-0f019310f7fa[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with aws_security_group.ec2_security_group,
+[31m│[0m [0m  on main.tf line 7, in resource "aws_security_group" "ec2_security_group":
+[31m│[0m [0m   7: resource "aws_security_group" "ec2_security_group" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
